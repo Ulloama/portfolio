@@ -3,9 +3,34 @@
     src: url('../font/inconsolata.otf') format('opentype');
 }
 
+@font-face {
+    font-family: Poppins;
+    src: url('../font/poppins.ttf') format('opentype');
+}
+
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-tint: rgba(100,255,218,0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
+    --easing: cubic-bezier(0.645,0.045,0.355,1);
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
 body {
-    font-family: 'Inconsolata' !important;
-    background-color: #0a192f !important;
+    font-family: sans-serif;
+    background-color: #0a192f;
+    color: white;
 }
 
 .g-color {
@@ -17,3 +42,70 @@ body {
     height: 50px;
     margin: .5em;
   }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*.list-group-item{
+    background-color: #233554;
+    margin: 10px;
+
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    display: inline;
+}*/
+#gitHubIcon {
+    display: flex;
+}
+
+.projects-grid {
+    list-style: none;
+    padding: 0px;
+    margin: 50px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    position: relative;
+}
+
+.projects-list {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    visibility: visible;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+.project-inner{
+    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    padding: 2rem 1.75rem;
+    border-radius: var(--border-radius);
+    background-color: var(--light-navy);
+    transition: var(--transition);
+}
+
+
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+

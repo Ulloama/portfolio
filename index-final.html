@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="sr">
 
 <head>
   <meta charset="UTF-8">
@@ -14,13 +14,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
     crossorigin="anonymous"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script defer src="./assets/script/index.js"></script>
   <title>Ulloa Mariano</title>
 </head>
 
 <body>
-  <header style="font-family: Inconsolata;">
+  <header>
     <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="#presentation">
         <!-- SVG Sprite -->
         <svg width="0" height="0" class="hidden">
           <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
@@ -84,40 +89,74 @@
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <ion-icon name="reorder-four-outline"></ion-icon>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="#"><span class="g-color">01.</span> About</a>
-          <a class="nav-link" href="#"><span class="g-color">02.</span> Experience</a>
-          <a class="nav-link" href="#"><span class="g-color">03.</span> Work</a>
-          <a class="nav-link" href="#"><span class="g-color">04.</span> Contact</a>
-          <button type="button" class="btn btn-dark">Resume</button>
+        <div class="navbar-nav justify-content-end align-items-center">
+          <a class="nav-link" href="#aboutMe"><span class="g-color">01.</span> Sobre mi</a>
+          <a class="nav-link" href="#workExperience"><span class="g-color">02.</span> Experiencia</a>
+          <a class="nav-link" href="#projects"><span class="g-color">03.</span> Proyectos</a>
+          <a class="nav-link" href="#contact"><span class="g-color">04.</span> Contacto</a>
+          <a class="resumen-btn" href="./assets/files/cv_ulloa-mariano.pdf" target="_blank">Resumen</a>
         </div>
       </div>
     </nav>
-
   </header>
-  <div class="container">
+  <div class="container" id="presentation">
     <div class="justify-content-center">
-      <p style="font-family: Inconsolata;">Hola, mi nombre es</p>
-      <h1 style="font-size: 60px;">Mariano Ulloa.</h1>
-      <h2 style="font-size: 60px;">Le busco la quinta pata al gato.</h2>
-      <p>Actualmente me especializo como Analista de Testing de Procesos ETL en el ámbito financiero.
-      <br> Además me encuentro estudiando la carrera de Tecnictatura en Programación con el fin de profundizar y complementar mis conocimientos en programación web front-end.</p>
+      <h2 class="min-headings">Hola, mi nombre es</h2>
+      <h1 class="big-headings">Mariano Ulloa.</h1>
+      <h2 class="md-headings">Soy Analista de Calidad y Desarrollador Web.</h2>
+      <p class="paragraphs-text">Actualmente me especializo como Analista de Testing de Procesos ETL en el ámbito financiero.
+      Además me encuentro estudiando la carrera de Tecnictatura en Programación con el fin de profundizar y complementar mis conocimientos en programación web front-end.</p>
     </div>
   </div>
-  <div class="container">
-    <h2>01. About me</h2>
-    <p>Hola! Soy Mariano y me dedico al Testing de Procesos ETL y el Desarrollo Web. Desde hace tres años me he sumergido en el mundo IT 
+  <div class="container" id="aboutMe">
+    <h2 class="big-headings"><span>01.</span> Sobre mi</h2>
+    <p class="paragraphs-text">Hola! Soy Mariano y me dedico al Testing de Procesos ETL y el Desarrollo Web. Desde hace tres años me he sumergido en el mundo IT 
       capacitandome con cursos de HTML & CSS, Javascript y React JS, y actualmente cursando el último año de la Tecnicatura Superior en Pogramcaación
-      de la Universidad Tecnológica Nacional de Córdoba. <br>
-      Desde hace un año me desempeño profesionalmente en el área de Calidad de TI de BANCOR como Analista de Calidad. </p>
-      Estas son algunos de las tecnologías con las que he trabajado ultimamente: <br>
-      <p> <strong>PONER AQUI IMAGENES QUE SE MUEVEN</strong> </p>
+      de la Universidad Tecnológica Nacional de Córdoba.
+      Desde hace un año me desempeño profesionalmente en el área de Calidad de TI de BANCOR como Analista de Calidad. 
+      Estas son algunos de las tecnologías con las que he trabajado ultimamente:
+    </p>
+    <div class="row row-tech-list">
+      <div class="row-tech-items">
+        <img src="./assets/images/html.png" alt="">
+      </div>
+      <div class="row-tech-items">
+        <img src="./assets/images/css.png" alt="">
+      </div>
+      <div class="row-tech-items">
+        <img src="./assets/images/js.png" alt="">
+      </div>
+      <div class="row-tech-items">
+        <img src="./assets/images/react.png" alt="">
+      </div>
+      <div class="row-tech-items">
+        <img src="./assets/images/c.png" alt="">
+      </div>
+      <div class="row-tech-items">
+        <img src="./assets/images/sql.png" alt="">
+      </div>
+      <div class="row-tech-items">
+        <img src="./assets/images/mongo.png" alt="">
+      </div>
+      <div class="row-tech-items">
+        <img src="./assets/images/git.png" alt="">
+      </div>
+      <div class="row-tech-items">
+        <img src="./assets/images/firebase.png" alt="">
+      </div>
+      <div class="row-tech-items">
+        <img src="./assets/images/azure.png" alt="">
+      </div>
+      <div class="row-tech-items">
+        <img src="./assets/images/powerBi.png" alt="">
+      </div>
+    </div>
   </div>
-  <div class="container">
-    <h2>02. Donde he trabajado</h2>
+  <div class="container" id="workExperience">
+    <h2 class="big-headings"><span>02.</span> Donde he trabajado</h2>
     <div class="row">
       <div class="col-3">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -127,15 +166,20 @@
       </div>
       <div class="col-9">
         <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nulla similique, ipsum soluta numquam, porro quia blanditiis adipisci minus cupiditate placeat, nostrum aperiam natus? Officia consectetur odio nisi nostrum voluptate!</div>
-          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam fugiat deleniti atque nemo maxime officiis dolores totam vitae cum voluptatum ea, voluptate laudantium quibusdam quis deserunt recusandae dignissimos ducimus.</div>
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <h3>Analista de Calidad <a href="">@ Bancor</a></h3>
+            <p><span>Julio 2021 - Presente</span></p>
+          </div>
+          <div class="tab-pane" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <h3>Representate de experiencia al Cliente <a href="">@ Apex America</a></h3>
+            <p><span>Julio 2021 - Presente</span></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="container">
-    <h2>03. Mis proyectos</h2>
-
+  <div class="container" id="projects">
+    <h2 class="big-headings"><span>03.</span> Mis proyectos</h2>
     <ul class="projects-grid">
       <li class="projects-list">
         <div class="project-inner">
@@ -155,8 +199,17 @@
               </div>
             </div>
             <h3 class="project-title">Moonment</h3>
-            <div class="project-description"></div>
+            <div class="project-description">
+              <p>Página web de e-commerce creada como trabajo final de curso certificado de React JS. </p>
+            </div>
           </header>
+          <footer>
+            <ul class="project-footer-list">
+              <li>React JS</li>
+              <li>CSS</li>
+              <li>Firebase</li>
+            </ul>
+          </footer>
         </div>
       </li>
       <li class="projects-list">
@@ -169,16 +222,25 @@
                 </svg>
               </div>
               <div id="gitHubIcon">
-                <a href="https://github.com/Ulloama/moonment" target="_blank">
+                <a href="https://github.com/Ulloama/Merida" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
                   </svg>
                 </a>
               </div>
             </div>
-            <h3 class="project-title">Moonment</h3>
-            <div class="project-description"></div>
+            <h3 class="project-title">Merida</h3>
+            <div class="project-description">
+              <p>Página web para micremprendimiento de Gestión de Redes Sociales con carrito de compras, para trabajo final de curso certificado de Javascript</p>
+            </div>
           </header>
+          <footer>
+            <ul class="project-footer-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+            </ul>
+          </footer>
         </div>
       </li>
       <li class="projects-list">
@@ -191,16 +253,25 @@
                 </svg>
               </div>
               <div id="gitHubIcon">
-                <a href="https://github.com/Ulloama/moonment" target="_blank">
+                <a href="https://github.com/Ulloama/cosecha-callejera-html" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
                   </svg>
                 </a>
               </div>
             </div>
-            <h3 class="project-title">Moonment</h3>
-            <div class="project-description"></div>
+            <h3 class="project-title">Cosecha Callejera</h3>
+            <div class="project-description">
+              <p>Single page web creada para comercio gastronómico con carta de comidas a la venta.</p>
+            </div>
           </header>
+          <footer>
+            <ul class="project-footer-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+            </ul>
+          </footer>
         </div>
       </li>
       <li class="projects-list">
@@ -213,16 +284,24 @@
                 </svg>
               </div>
               <div id="gitHubIcon">
-                <a href="https://github.com/Ulloama/moonment" target="_blank">
+                <a href="https://github.com/Ulloama/presskit_project" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
                   </svg>
                 </a>
               </div>
             </div>
-            <h3 class="project-title">Moonment</h3>
-            <div class="project-description"></div>
+            <h3 class="project-title">Team Spicy Bubble Presskit</h3>
+            <div class="project-description">
+              <p>Single page web creada para información de prensa de videojuego como proyecto de Sureksu.</p>
+            </div>
           </header>
+          <footer>
+            <ul class="project-footer-list">
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </footer>
         </div>
       </li>
       <li class="projects-list">
@@ -235,16 +314,25 @@
                 </svg>
               </div>
               <div id="gitHubIcon">
-                <a href="https://github.com/Ulloama/moonment" target="_blank">
+                <a href="https://github.com/Ulloama/calculator-taxes" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
                   </svg>
                 </a>
               </div>
             </div>
-            <h3 class="project-title">Moonment</h3>
-            <div class="project-description"></div>
+            <h3 class="project-title">Calculadora de impuestos</h3>
+            <div class="project-description">
+              <p>Single page web creada puramente con React JS para el calculo de impuestos agregados a la compra de productos desde Argentina al exterior.</p>
+            </div>
           </header>
+          <footer>
+            <ul class="project-footer-list">
+              <li>React JS</li>
+              <li>CSS</li>
+              <li>Firebase</li>
+            </ul>
+          </footer>
         </div>
       </li>
       <li class="projects-list">
@@ -257,20 +345,47 @@
                 </svg>
               </div>
               <div id="gitHubIcon">
-                <a href="https://github.com/Ulloama/moonment" target="_blank">
+                <a href="https://github.com/Ulloama/semillerodigital-9" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
                   </svg>
                 </a>
               </div>
             </div>
-            <h3 class="project-title">Moonment</h3>
-            <div class="project-description"></div>
+            <h3 class="project-title">Semillero Digital</h3>
+            <div class="project-description">
+              <p>Página web completa para ONG que brinda capacitaciones gratutitas en tecnologías web. Creada en equipo para la Hackaton de Coderhouse.</p>
+            </div>
           </header>
+          <footer>
+            <ul class="project-footer-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+            </ul>
+          </footer>
         </div>
       </li>
     </ul>
+    <div class="justify-content-center text-center">
+      <a class="a-button" href="https://github.com/Ulloama?tab=repositories" target="_blank">Ver más</a>
+    </div>
   </div>
+  <div class="container" id="contact">
+    <h2 class="min-headings">04. Bueno, ¿y ahora?</h2>
+    <h1 class="md-headings">Sigamos en Contacto</h2>
+    <p>Aunque actualmente no estoy en una búsqueda activa de nuevo trabajo, estoy abierto a nuevas oportunidades. No dudes en escribirme, <br> ¡te voy a responder lo antes posible!</p>
+    <div>
+      <a href="https://github.com/Ulloama" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+      <a href="mailto:marianoaulloa@gmail.com" target="_blank"><ion-icon name="mail-outline"></ion-icon></a>
+      <a href="https://www.linkedin.com/in/ulloa-mariano" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+    </div>
+  </div>
+  <footer class="container">
+    <div>
+      <h3><span>Designed & Built by Mariano Ulloa</span></h3>
+    </div>
+  </footer>
 </body>
 
 </html>
